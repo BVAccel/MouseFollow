@@ -15,7 +15,6 @@ MouseFollow.js is a small JS library that adds an element to the page that follo
     - [Shape](#shape)
 
 ## Installation
-*This needs to be added to NPM before it can be properly documented*
 
 There are multiple ways to use this in a project.
 
