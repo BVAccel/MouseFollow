@@ -43,6 +43,7 @@ function updateElement(element, options) {
   element.style.left = 0;
   element.style.display = 'block';
   element.style.transform = 'translate(-50%, -50%)';
+  element.style.pointerEvents = 'none';
 
   if (options.shape.toLowerCase() === 'ellipse') {
     element.style.borderRadius = options.borderRadius;
@@ -60,15 +61,35 @@ function setMousePosition(event, element, options, parentObject) {
   }
 }
 
-function findMousePosition(action, element, options, parentObject) {
+function hideElement(element) {
+  element.style.opacity = 0;
+}
+
+function showElement(element, options) {
+  element.style.opacity = options.opacity;
+}
+
+function setupMouseActions(action, element, options, parentObject) {
   function wrappedSetMousePosition(event) {
     setMousePosition(event, element, options, parentObject);
   }
 
+  function wrappedHideElement() {
+    hideElement(element);
+  }
+
+  function wrappedShowElement() {
+    showElement(element, options);
+  }
+
   if (action.toLowerCase() === 'remove') {
     document.removeEventListener('mousemove', wrappedSetMousePosition);
+    document.removeEventListener('mouseenter', wrappedShowElement);
+    document.removeEventListener('mouseleave', wrappedHideElement);
   } else {
     document.addEventListener('mousemove', wrappedSetMousePosition);
+    document.addEventListener('mouseenter', wrappedShowElement);
+    document.addEventListener('mouseleave', wrappedHideElement);
   }
 }
 
@@ -89,7 +110,7 @@ function setPosition(element, parentObject) {
 // Public
 MouseFollow.prototype.initialize = function initialize() {
   updateElement(this.element, this.options);
-  findMousePosition('add', this.element, this.options, this);
+  setupMouseActions('add', this.element, this.options, this);
   addElementToPage(this.element, this.options);
 };
 
@@ -99,5 +120,5 @@ MouseFollow.prototype.update = function update(options) {
 
 MouseFollow.prototype.uninitialize = function uninitialize() {
   removeElementFromPage(this.element);
-  findMousePosition('remove');
+  setupMouseActions('remove');
 };
