@@ -6,17 +6,12 @@
   "author": "Sam Webb <510samwebb@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "eslint": "./node_modules/.bin/eslint index.js",
     "build": "webpack"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.3",
     "@babel/core": "^7.3.4",
     "@babel/preset-env": "^7.3.4",
-    "@babel/preset-stage-3": "^7.0.0",
-    "eslint": "^5.15.1",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.16.0",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3"
   },

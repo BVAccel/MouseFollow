@@ -10,6 +10,9 @@ MouseFollow.js is a small JS library that adds an elemen to the page that follow
   - [List of Customizations](#list-of-customizations)
     - [Border Radius](#border-radius)
     - [Color](#color)
+    - [Height](#height)
+    - [Opacity](#opacity)
+    - [Shape](#shape)
 
 ## Installation
 *This needs to be added to NPM before it can be properly documented*
