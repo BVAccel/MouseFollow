@@ -23,9 +23,6 @@ function MouseFollow(userOptions) {
   this.left = null;
 }
 
-// Assumes window will be present since this a browser specific module
-window.MouseFollow = MouseFollow;
-
 // Private
 function updateElement(element, options) {
   element.style.height = `${options.height}px`;
@@ -122,3 +119,9 @@ MouseFollow.prototype.uninitialize = function uninitialize() {
   removeElementFromPage(this.element);
   setupMouseActions('remove');
 };
+
+if (window && !window.MouseFollow) {
+  window.MouseFollow = MouseFollow;
+}
+
+export default MouseFollow;

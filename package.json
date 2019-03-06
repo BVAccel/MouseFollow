@@ -1,6 +1,6 @@
 {
   "name": "@bva/mouse-follow-js",
-  "version": "1.0.1",
+  "version": "0.0.1",
   "description": "Small library to add a small background that follows the user's cursor",
   "main": "src/index.js",
   "author": "Sam Webb <510samwebb@gmail.com>",
