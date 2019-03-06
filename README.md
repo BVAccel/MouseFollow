@@ -25,7 +25,7 @@ The simplest way is to open the /dist folder, copy mousefollow.js into the proje
 ```html
 <body>
 
-  <script src="mousefollow.js"></script>
+  <script src="mousefollow.min.js"></script>
   <script src="app.js"></script>
 </body>
 ```
@@ -51,10 +51,10 @@ First the library needs to be included in the file that will be using it:
 
 ```javascript
 // ES6 Modules
-import MouseFollow from 'mouse-follow-js';
+import MouseFollow from '@bva/mouse-follow-js';
 
 // Node Modules
-const MouseFollow = require('mouse-follow-js');
+const MouseFollow = require('@bva/mouse-follow-js');
 ```
 
 Once it is included in the file, a MouseFollow instance needs to be created and initialized:
@@ -147,3 +147,31 @@ new MouseFollow({
 
 #### Shape
 This sets the shape of the item. There are two possible values `rectangle` and `ellipse`. Defaults to `ellipse`. If an invalid value is used, will default to `rectangle`.
+
+Example values:
+
+```javascript
+new MouseFollow({
+  shape: 'rectangle',
+});
+
+new MouseFollow({
+  shape: 'ellipse',
+});
+```
+
+#### Transition Delay
+
+#### Transition Duration
+
+#### Transition Timing Function
+
+#### Width
+
+## Example
+
+To view an example locally, follow the steps below using your terminal:
+
+1. Clone this repository `git clone https://github.com/BVAccel/MouseFollow.git`
+2. Navigate into the repository `cd MouseFollow`
+3. Open the example site in your browser `open example/index.html`
