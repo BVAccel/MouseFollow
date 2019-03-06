@@ -17,6 +17,34 @@ MouseFollow.js is a small JS library that adds an element to the page that follo
 ## Installation
 *This needs to be added to NPM before it can be properly documented*
 
+There are multiple ways to use this in a project.
+
+### HTML
+
+The simplest way is to open the /dist folder, copy mousefollow.js into the project and link to it in your HTML.
+
+```html
+<body>
+
+  <script src="mousefollow.js"></script>
+  <script src="app.js"></script>
+</body>
+```
+
+### NPM
+
+When using NPM, the package must first be pulled from the registry:
+
+```shell
+#yarn
+yarn add @bva/mouse-follow-js
+
+#npm
+npm install @bva/mouse-follow-js
+```
+
+One done here, follow the instructions in [setup](#setup).
+
 ## Setup
 **NodeJS**
 
