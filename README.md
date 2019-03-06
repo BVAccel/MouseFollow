@@ -1,7 +1,7 @@
 MouseFollow.js
 ===
 
-MouseFollow.js is a small JS library that adds an elemen to the page that follows the user's cursor.
+MouseFollow.js is a small JS library that adds an element to the page that follows the user's cursor.
 
 **Table Of Contents**
 - [Installation](#installation)
@@ -92,7 +92,7 @@ new MouseFollow({
 });
 
 new MouseFollow({
-  color: 'rgb(59, 99, 20),
+  color: rgb(59, 99, 20),
 });
 ```
 
