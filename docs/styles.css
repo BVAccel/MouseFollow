@@ -1,0 +1,68 @@
+/*-- GLOBAL */
+:root {
+  --fancy-font-stack: 'Pacifico', cursive;
+  --mono-space-font-stack: 'Source Code Pro', monospace;
+  --primary-font-stack: 'Open Sans', sans-serif;
+
+  --text-color: #1d1d1d;
+}
+
+body {
+  box-sizing: border-box;
+  color: var(--text-color);
+  font-size: 20px;
+  margin: 0;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+.headline {
+  font-family: var(--primary-font-stack);
+  font-size: 2em;
+}
+
+.headline__large {
+  font-size: 3em;
+}
+
+.headline__x-large {
+  font-size: 4em;
+}
+
+.paragraph {
+  font-family: var(--primary-font-stack);
+  font-size: 1em;
+}
+
+.headline__fancy,
+.paragraph__fancy {
+  font-family: var(--fancy-font-stack);
+}
+
+.paragraph__small {
+  font-size: 0.85em;
+}
+
+.section {
+  padding: 150px 50px;
+  width: 100%;
+}
+
+/*------------------------*/
+/*-- INTRO */
+
+.intro {
+  background-color: steelblue;
+  color: white;
+  text-align: center;
+}
