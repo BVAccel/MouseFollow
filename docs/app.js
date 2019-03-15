@@ -1,5 +1,5 @@
 var mf = new MouseFollow({
-  color: 'orange'
+  color: 'yellow'
 });
 
 mf.initialize();
