@@ -15,13 +15,20 @@ export default function setupMouseActions(action, element, options, parentObject
     showElement(element, options);
   }
 
+  const container = options.container || 'body';
+  const containerElements = document.querySelectorAll(container);
+
   if (action.toLowerCase() === 'remove') {
-    document.removeEventListener('mousemove', wrappedSetMousePosition);
-    document.removeEventListener('mouseenter', wrappedShowElement);
-    document.removeEventListener('mouseleave', wrappedHideElement);
+    Array.from(containerElements).map((element) => {
+      element.removeEventListener('mousemove', wrappedSetMousePosition);
+      element.removeEventListener('mouseenter', wrappedShowElement);
+      element.removeEventListener('mouseleave', wrappedHideElement);
+    });
   } else {
-    document.addEventListener('mousemove', wrappedSetMousePosition);
-    document.addEventListener('mouseenter', wrappedShowElement);
-    document.addEventListener('mouseleave', wrappedHideElement);
+    Array.from(containerElements).map((element) => {
+      element.addEventListener('mousemove', wrappedSetMousePosition);
+      element.addEventListener('mouseenter', wrappedShowElement);
+      element.addEventListener('mouseleave', wrappedHideElement);
+    });
   }
 }
