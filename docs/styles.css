@@ -5,6 +5,9 @@
   --primary-font-stack: 'Open Sans', sans-serif;
 
   --text-color: #1d1d1d;
+
+  --primary-color: #684c85;
+  --secondary-color: #ff9c11;
 }
 
 * {
@@ -135,15 +138,27 @@ code {
   display: flex;
   justify-content: flex-start;
   list-style: none;
-  margin: 0;
+  margin: 0 0 0 5px;
   padding: 0;
 }
 
+.nav__item {
+  margin-right: 5px;
+}
+
 .nav__link {
+  box-shadow: 0 -5px 0 var(--secondary-color) inset;
   color: black;
   display: block;
   padding: 20px 40px;
   text-decoration: none;
+  transition-duration: 400ms;
+  transition-property: box-shadow;
+  transition-timing-function: ease-out;
+}
+
+.nav__link:hover {
+  box-shadow: 0 -100px 0 transparent inset;
 }
 
 .logo {
@@ -181,7 +196,7 @@ code {
 
 .intro {
   align-items: center;
-  background-color: #684c85;
+  background-color: var(--primary-color);
   color: white;
   display: flex;
   flex-direction: column;
