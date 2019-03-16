@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Pacifico|Source+Code+Pro" rel="stylesheet">
+</head>
+<body>
+  <header class="header width-full">
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a class="nav__link text text--small" target="_blank" href="https://github.com/BVAccel/MouseFollow">
+            Github
+          </a>
+        </li>
+
+        <li class="nav__item">
+          <a class="nav__link text text--small" target="_blank" href="https://www.npmjs.com/package/@bva/mouse-follow-js">
+            NPM
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="logo">
+      <span class="logo__item">MF</span>
+    </div>
+  </header>
+
+  <main class="main width-full">
+    <section class="section intro width-full">
+      <h1 class="intro__headline headline headline--x-large headline--fancy text--centered">MouseFollow.js</h1>
+      <p class="text text--centered">Following mice since 2019! A.K.A. Cat.js</p>
+    </section>
+
+    <section class="section setup width-full">
+      <div class="section__wrapper width-80 content-centered">
+        <h2 class="section__headline headline text--centered">Installation & Setup</h2>
+        <strong class="text">HTML</strong>
+        <p class="text text--space-below">The simplest way to get started with MouseFollow.js is via HTML. Copy/paste dist/mousefollow.min.js into your website files and pull it in via a script tag.</p>
+
+        <code>
+          &lt;script src="./mousefollow.min.js"&gt;&lt;/script&gt; <br />
+          &lt;script src="./app.js"&gt;&lt;/script&gt;
+        </code>
+
+        <strong class="text">Yarn/NPM</strong>
+        <p class="text text--space-below">NPM can also be used with either the yarn or npm commands.</p>
+
+        <code>
+          #yarn<br />
+          yarn add @bva/mouse-follow-js<br />
+          <br />
+          #npm<br />
+          npm install @bva/mouse-follow-js
+        </code>
+
+        <p class="text text--space-below">Once the front-end has access to the MouseFollow class, it will need to be instantiated and initialized.</p>
+
+        <code>
+          const mf = new MouseFollow();<br />
+          mf.initialize();
+        </code>
+
+        <p class="text">This is the fastest way of setting up an MF instance, but to make it more integrated experience, checkout customizations below.</p>
+      </div>
+    </section>
+
+    <section class="section customization width-full ">
+      <div class="section__wrapper width-80 content-centered">
+        <h2 class="section__headline headline text--centered">Customizations</h2>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__copy text text--x-small">&copy; 2019 BVAccel. All rights reserved.</p>
+  </footer>
+
+  <script src="../dist/mousefollow.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
