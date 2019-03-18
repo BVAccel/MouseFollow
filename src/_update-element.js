@@ -16,7 +16,7 @@ export default function updateElement(element, options) {
   element.style.transitionDuration = `${options.transitionDuration}ms`;
   element.style.transitionDelay = `${options.transitionDelay}ms`;
 
-  if (!options.shape || options.shape.toLowerCase() !== 'circle' || options.shape.toLowerCase() !== 'square') {
+  if (!options.shape || (options.shape.toLowerCase() !== 'circle' && options.shape.toLowerCase() !== 'square')) {
     options.shape = 'circle';
   }
 
