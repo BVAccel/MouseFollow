@@ -201,6 +201,7 @@ code {
 }
 
 .logo__item {
+  color: var(--primary-color);
   font-family: var(--fancy-font-stack);
   font-size: 2em;
 }
