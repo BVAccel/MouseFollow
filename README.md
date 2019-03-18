@@ -130,7 +130,7 @@ Example values:
 
 ```javascript
 new MouseFollow({
-  container: 'body', // default
+  container: 'body', // Default
 });
 
 new MouseFollow({
@@ -143,24 +143,24 @@ new MouseFollow({
 ```
 
 #### Height
-This sets the height of the item. Is of type `Number`. Defaults to `50`.
+This sets the height of the item. Is of type `Number`.
 
 Example values:
 
 ```javascript
 new MouseFollow({
-  height: 60,
+  height: 50, // Default
 });
 ```
 
 #### Opacity
-This sets the opacity of the item. Any number from 0 to 1. Defaults to `0.4`;
+This sets the opacity of the item. Any number from 0 to 1.
 
 Example values:
 
 ```javascript
 new MouseFollow({
-  opacity: 0.4,
+  opacity: 0.4, // Default
 });
 ```
 
@@ -171,7 +171,7 @@ Example values:
 
 ```javascript
 new MouseFollow({
-  shape: 'circle', #default
+  shape: 'circle', // Default
 });
 
 new MouseFollow({
@@ -180,12 +180,97 @@ new MouseFollow({
 ```
 
 #### Transition Delay
+This changes the delay of the item following the cursor. Takes a value of Number.
+
+Example values:
+
+```javascript
+new MouseFollow({
+  transitionDelay: 5, // Default
+});
+```
 
 #### Transition Duration
 
+This sets the CSS transition duration on the item following the cursor. Takes values of type Number and is measured in milliseconds. A value of 1000 would mean 1 second.
+
+Example values:
+
+```javascript
+new MouseFollow({
+  transitionDuration: 200, // Default
+});
+```
+
 #### Transition Timing Function
+This sets the CSS transition timing function. Takes any valid timing function.
+
+Example values:
+
+```javascript
+new MouseFollow({
+  transitionTimingFunction: 'ease-out', // Default
+});
+
+new MouseFollow({
+  transitionTimingFunction: 'ease-in-out',
+});
+
+new MouseFollow({
+  transitionTimingFunction: 'cubic-bezier(0.420, 0.000, 0.580, 1.000)',
+});
+```
 
 #### Width
+This sets the width set in pixels. Takes a value of type Number.
+
+Example values:
+
+```javascript
+new MouseFollow({
+  width: 50, // Default
+});
+```
+
+### Updating
+It is also possible to update a MouseFollow instance at any point using `.update()` on the instance object. It accepts a configuration object with the same options as above, but it only needs the options that are changing.
+
+Example:
+
+```javascript
+const mf = new MouseFollow({
+  color: '#684c85',
+  container: '.element',
+});
+
+mf.initialize();
+
+const element = docuemnt.querySelector('.element');
+element.addEventListener('click', (event) => {
+  mf.update({
+    color: '#ff9c11',
+  });
+});
+```
+
+### Uninitializing
+If the MouseFollow instance needs to be uninitialized for any reason, use the `.uninitialize()`.
+
+Example:
+
+```javascript
+const mf = new MouseFollow({
+  color: '#684c85',
+  container: '.element',
+});
+
+mf.initialize();
+
+const element = docuemnt.querySelector('.element');
+element.addEventListener('click', (event) => {
+  mf.uninitialize()
+});
+```
 
 ## Example
 
