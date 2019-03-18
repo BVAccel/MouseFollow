@@ -5,14 +5,23 @@ MouseFollow.js is a small JS library that adds an element to the page that follo
 
 **Table Of Contents**
 - [Installation](#installation)
+  -[HTML](#html)
+  -[NPM](#npm)
 - [Setup](#setup)
 - [Customization](#customization)
   - [List of Customizations](#list-of-customizations)
     - [Border Radius](#border-radius)
     - [Color](#color)
+    - [Container](#container)
     - [Height](#height)
     - [Opacity](#opacity)
     - [Shape](#shape)
+    - [Transition Delay](#transition-delay)
+    - [Transition Duration](#transition-duration)
+    - [Transition Timing Function](#transition-timing-function)
+    - [Width](#width)
+  -[Updating](#updating)
+  -[Uninitializing](#uninitializating)
 
 ## Installation
 
