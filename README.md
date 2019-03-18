@@ -280,11 +280,3 @@ element.addEventListener('click', (event) => {
   mf.uninitialize()
 });
 ```
-
-## Example
-
-To view an example locally, follow the steps below using your terminal:
-
-1. Clone this repository `git clone https://github.com/BVAccel/MouseFollow.git`
-2. Navigate into the repository `cd MouseFollow`
-3. Open the example site in your browser `open example/index.html`
