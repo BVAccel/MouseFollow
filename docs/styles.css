@@ -67,6 +67,11 @@ code {
   white-space: nowrap;
 }
 
+.code--inline {
+  display: inline;
+  padding: 2px;
+}
+
 .headline {
   font-family: var(--primary-font-stack);
   font-size: 2em;
