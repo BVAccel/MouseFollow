@@ -25,7 +25,8 @@ class MouseFollow {
   }
 
   update(options) {
-    updateElement(this.element, options);
+    assign(this.options, options);
+    updateElement(this.element, this.options);
   }
 
   uninitialize() {

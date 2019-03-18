@@ -165,17 +165,17 @@ new MouseFollow({
 ```
 
 #### Shape
-This sets the shape of the item. There are two possible values `rectangle` and `ellipse`. Defaults to `ellipse`. If an invalid value is used, will default to `rectangle`.
+This sets the default shape of the item. There are two possible values: `circle` and `square`. The shape can still be manipulated with the width, height and borderRadius properties, but this option gives a quick starting point.
 
 Example values:
 
 ```javascript
 new MouseFollow({
-  shape: 'rectangle',
+  shape: 'circle', #default
 });
 
 new MouseFollow({
-  shape: 'ellipse',
+  shape: 'square',
 });
 ```
 
