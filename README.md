@@ -72,7 +72,7 @@ The default behavior of MouseFollow is nice, but customization is needed for a m
 ```javascript
 const options = {
   height: 40,
-  shape: 'rectangle',
+  shape: 'square',
   width: 30
 };
 

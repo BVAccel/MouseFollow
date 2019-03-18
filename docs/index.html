@@ -33,14 +33,14 @@
 
   <main class="main width-full">
     <section class="section intro width-full">
-      <h1 class="intro__headline headline headline--x-large headline--fancy text--centered">MouseFollow.js</h1>
-      <p class="text text--centered">Following mice since 2019! A.K.A. Cat.js</p>
+      <h1 class="intro__headline headline headline--x-large headline--fancy headline--inverse text--centered">MouseFollow.js</h1>
+      <p class="text text--centered text--inverse">Following mice since 2019! A.K.A. Cat.js</p>
     </section>
 
     <section class="section setup width-full">
       <div class="section__wrapper width-80 content-centered">
         <h2 class="section__headline headline text--centered">Installation & Setup</h2>
-        <strong class="text">HTML</strong>
+        <h3 class="headline headline--small">HTML</h3>
         <p class="text text--space-below">The simplest way to get started with MouseFollow.js is via HTML. Copy/paste dist/mousefollow.min.js into your website files and pull it in via a script tag.</p>
 
         <code>
@@ -48,7 +48,7 @@
           &lt;script src="./app.js"&gt;&lt;/script&gt;
         </code>
 
-        <strong class="text">Yarn/NPM</strong>
+        <h3 class="headline headline--small">Yarn/NPM</h3>
         <p class="text text--space-below">NPM can also be used with either the yarn or npm commands.</p>
 
         <code>
@@ -73,6 +73,201 @@
     <section class="section customization width-full ">
       <div class="section__wrapper width-80 content-centered">
         <h2 class="section__headline headline text--centered">Customizations</h2>
+        <p class="text text--space-below">The default behavior of MouseFollow is nice, but customization is needed for a more unique and on-brand experience. The `MouseFollow` constructure can accept an option configuration object. An example would look like:</p>
+        
+        <code>
+          const options = {<br />
+          &nbsp;&nbsp;height: 40,<br />
+          &nbsp;&nbsp;shape: 'square',<br />
+          &nbsp;&nbsp;width: 30<br />
+          };<br />
+          <br />
+          const mf = new MouseFollow(options);<br />
+          mf.initialize();
+        </code>
+        
+        <p class="text text--space-below">The above will add a 30x40px rectangle that will only follow the cursor when within the body.</p>
+        
+        <h3 class="headline headline--small text--space-below">List of Customizations</h3>
+        
+        <h4 class="headline headline--x-small">borderRadius</h4>
+        <p class="text text--space-below text--small">This is a string value and can be filled in with any valid CSS value. Defaults to `50%`. <em>Only used if shape is ellipse.</em></p>
+        
+        <p class="text text--small">Example values:</p>
+        
+        <code>
+          new MouseFollow({ <br />
+          &nbsp;&nbsp;borderRadius: '25%',<br />
+          });<br />
+          <br />
+          new MouseFollow({<br />
+          &nbsp;&nbsp;borderRadius: '50% 25%',<br />
+          });<br />
+          <br />
+          new MouseFollow({<br />
+          &nbsp;&nbsp;borderRadius: '30px',<br />
+          });
+        </code>
+        
+        <h4 class="headline headline--x-small"">color</h4>
+        <p class="text text--space-below text--small">This sets the background color of the item. Can be any vallid CSS color value. Defaults to `#000`.</p>
+        
+        <p class="text text--small">Example values:</p>
+        
+        <code>
+          new MouseFollow({<br />
+          &nbsp;&nbsp;color: '#ff0000',<br />
+          });<br />
+          <br />
+          new MouseFollow({<br />
+          &nbsp;&nbsp;color: 'rebeccapurple',<br />
+          });<br />
+          <br />
+          new MouseFollow({<br />
+          &nbsp;&nbsp;color: rgb(59, 99, 20),<br />
+          });
+        </code>
+        
+        <h4 class="headline headline--x-small">container</h4>
+        <p class="text text--space-below text--small">This sets the element that will contain the MouseFollow item.</p>
+        
+        <p class="text text--small">Example values:</p>
+        
+        <code>
+          new MouseFollow({<br />
+          &nbsp;&nbsp;container: 'body', // Default<br />
+          });<br />
+          <br />
+          new MouseFollow({<br />
+          &nbsp;&nbsp;container: '.classname',<br />
+          });<br />
+          <br />
+          new MouseFollow({<br />
+          &nbsp;&nbsp;container: '[data-attribute]',<br />
+          });
+        </code>
+        
+        <h4 class="headline headline--x-small">height</h4>
+        <p class="text text--space-below text--small">This sets the height of the item. Is of type `Number`.</p>
+        
+        <p class="text text--small">Example values:</p>
+        
+        <code>
+          new MouseFollow({<br />
+          &nbsp;&nbsp;height: 50, // Default<br />
+          });
+        </code>
+        
+        <h4 class="headline headline--x-small">opacity</h4>
+        <p class="text text--space-below text--small">This sets the opacity of the item. Any number from 0 to 1.</p>
+        
+        <p class="text text--small">Example values:</p>
+        
+        <code>
+          new MouseFollow({<br />
+          &nbsp;&nbsp;opacity: 0.4, // Default<br />
+          });
+        </code>
+        
+        <h4 class="headline headline--x-small">shape</h4>
+        <p class="text text--space-below text--small">This sets the default shape of the item. There are two possible values: `circle` and `square`. The shape can still be manipulated with the width, height and borderRadius properties, but this option gives a quick starting point.</p>
+        
+        <p class="text text--small">Example values:</p>
+        
+        <code>
+          new MouseFollow({<br />
+          &nbsp;&nbsp;shape: 'circle', // Default<br />
+          });<br />
+          <br />
+          new MouseFollow({<br />
+          &nbsp;&nbsp;shape: 'square',<br />
+          });
+        </code>
+        
+        <h4 class="headline headline--x-small">transitionDelay</h4>
+        <p class="text text--space-below text--small">This changes the delay of the item following the cursor. Takes a value of Number.</p>
+        
+        <p class="text text--small">Example values:</p>
+        
+        <code>
+          new MouseFollow({<br />
+          &nbsp;&nbsp;transitionDelay: 5, // Default<br />
+          });
+        </code>
+        
+        <h4 class="headline headline--x-small">transitionDuration</h4>
+        
+        <p class="text text--space-below text--small">This sets the CSS transition duration on the item following the cursor. Takes values of type Number and is measured in milliseconds. A value of 1000 would mean 1 second.</p>
+        
+        <p class="text text--small">Example values:</p>
+        
+        <code>
+          new MouseFollow({<br />
+          &nbsp;&nbsp;transitionDuration: 200, // Default<br />
+          });
+        </code>
+        
+        <h4 class="headline headline--x-small">transitionTimingFunction</h4>
+        <p class="text text--space-below text--small">This sets the CSS transition timing function. Takes any valid timing function.</p>
+        
+        <p class="text text--small">Example values:</p>
+        
+        <code>
+          new MouseFollow({<br />
+          &nbsp;&nbsp;transitionTimingFunction: 'ease-out', // Default<br />
+          });<br />
+          <br />
+          new MouseFollow({<br />
+          &nbsp;&nbsp;transitionTimingFunction: 'ease-in-out',<br />
+          });<br />
+          <br />
+          new MouseFollow({<br />
+          &nbsp;&nbsp;transitionTimingFunction: 'cubic-bezier(0.420, 0.000, 0.580, 1.000)',<br />
+          });
+        </code>
+        
+        <h4 class="headline headline--x-small">width</h4>
+        <p class="text text--space-below text--small">This sets the width set in pixels. Takes a value of type Number.</p>
+        
+        <p class="text text--small">Example values:</p>
+        
+        <code class="section__last-element">
+          new MouseFollow({<br />
+          &nbsp;&nbsp;width: 50, // Default<br />
+          });
+        </code>
+      </div>
+    </section>
+
+    <section class="section methods width-full ">
+      <div class="section__wrapper width-80 content-centered">
+        <h2 class="section__headline headline text--centered">Methods</h2>
+        <p class="text text--space-below">Once a MouseFollow instance has been created, there are a few instance methods that can be used.</p>
+
+        <h3 class="headline headline--small">initialize()</h3>
+        <p class="text text--space-below">This initializes the MouseFollow instance and should be the first method called once a MouseFollow instance is created.</p>
+
+        <code>
+          const mf = new MouseFollow();<br />
+          mf.initialize();
+        </code>
+
+        <h3 class="headline headline--small">update()</h3>
+        <p class="text text--space-below">This is used to update a currently initialized MouseFollow instance.</p>
+
+        <code>
+          // Using the same instance as above <br />
+          const config = { color: '#684c85' }; <br />
+          mf.update(config);
+        </code>
+
+        <h3 class="headline headline--small">uninitialize()</h3>
+        <p class="text text--space-below">This is used to uninitialize a currently initialized MouseFollow instance.</p>
+
+        <code class="section__last-element">
+          // Using the same instance as above <br />
+          mf.uninitialize();
+        </code>
       </div>
     </section>
   </main>
