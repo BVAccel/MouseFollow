@@ -123,6 +123,25 @@ new MouseFollow({
 });
 ```
 
+#### Container
+This sets the element that will contain the MouseFollow item.
+
+Example values:
+
+```javascript
+new MouseFollow({
+  container: 'body', // default
+});
+
+new MouseFollow({
+  container: '.classname',
+});
+
+new MouseFollow({
+  container: '[data-attribute]',
+});
+```
+
 #### Height
 This sets the height of the item. Is of type `Number`. Defaults to `50`.
 
