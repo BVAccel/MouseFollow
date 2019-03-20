@@ -31,7 +31,7 @@ class MouseFollow {
 
   uninitialize() {
     removeElementFromPage(this.element);
-    setupMouseActions('remove');
+    setupMouseActions('remove', this.element, this.options, this);
   }
 };
 
