@@ -1,10 +1,11 @@
 {
   "name": "@bva/mouse-follow-js",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Small library to add a small background that follows the user's cursor",
   "main": "src/index.js",
   "author": "Sam Webb <510samwebb@gmail.com>",
   "license": "MIT",
+  "keywords": ["bva-module"],
   "scripts": {
     "build": "webpack"
   },
